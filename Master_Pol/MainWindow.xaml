@@ -5,6 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Master_Pol"
         mc:Ignorable="d"
+        Icon="/Resources/Мастер пол.ico"
         Title="MainWindow" Height="620" Width="900">
     <Grid>
         <Grid.RowDefinitions>
@@ -12,9 +13,10 @@
             <RowDefinition></RowDefinition>
         </Grid.RowDefinitions>
 
-        <Grid Grid.Row="0">
-            <StackPanel Orientation="Horizontal">
-                <Image x:Name="imageContainer"></Image>
+        <Grid Grid.Row="0" Background="#F4E8D3">
+            <StackPanel Orientation="Horizontal" HorizontalAlignment="Center">
+                <Image x:Name="imageContainer"
+                       Source="/Resources/Мастер пол.png"></Image>
                 <Label x:Name="appNameLabel" 
                        Content="Мастер пол"
                        VerticalAlignment="Center"></Label>

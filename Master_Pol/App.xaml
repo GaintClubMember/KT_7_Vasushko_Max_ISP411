@@ -4,6 +4,15 @@
              xmlns:local="clr-namespace:Master_Pol"
              StartupUri="MainWindow.xaml">
     <Application.Resources>
-         
+
+        <Style TargetType="Label">
+            <Setter Property="FontFamily" Value="Segoe UI"></Setter>
+            <Setter Property="FontSize" Value="32"></Setter>
+        </Style>
+
+        <Style TargetType="Button">
+            <Setter Property="Background" Value="#67BA80"></Setter>
+        </Style>
+
     </Application.Resources>
 </Application>
