@@ -9,6 +9,6 @@ namespace Master_Pol.Classes
 {
     internal class Manager
     {
-        public Frame FrameManager { get; set; }
+        public static Frame FrameManager { get; set; }
     }
 }

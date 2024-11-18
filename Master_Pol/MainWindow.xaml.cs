@@ -23,6 +23,27 @@ namespace Master_Pol
         public MainWindow()
         {
             InitializeComponent();
+            try
+            {
+                InitFrame();
+            }
+            catch (Exception ex)
+            {
+                return;
+            }
+        }
+
+        private void InitFrame()
+        {
+            try
+            {
+                Classes.Manager.FrameManager = frameContainer;
+                Classes.Manager.FrameManager.Navigate(new Pages.ViewPage());
+            }
+            catch (Exception ex)
+            {
+                return;
+            }
         }
     }
 }
