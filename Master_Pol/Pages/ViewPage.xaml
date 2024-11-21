@@ -15,15 +15,17 @@
         </Grid.RowDefinitions>
 
         <ListView x:Name="ListViewContainer"
-                  VerticalAlignment="Top"
-                  HorizontalAlignment="Center">
+                  VerticalAlignment="Center"
+                  HorizontalAlignment="Center" 
+                  Grid.Row="0">
             <ListView.ItemTemplate>
                 <DataTemplate>
 
                     <Grid>
                         <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="420"></ColumnDefinition>
                             <ColumnDefinition></ColumnDefinition>
-                            <ColumnDefinition></ColumnDefinition>
+                            <ColumnDefinition Width="115"></ColumnDefinition>
                         </Grid.ColumnDefinitions>
 
                         <StackPanel Orientation="Vertical"
@@ -31,34 +33,55 @@
                                     VerticalAlignment="Center"
                                     Grid.Column="0">
                             <StackPanel Orientation="Horizontal">
-                                <TextBlock Text="{Binding PartnerType.Name}"></TextBlock>
+                                <TextBlock Text="{Binding PartnerType.Name}" VerticalAlignment="Center"></TextBlock>
                                 <TextBlock Text="|"
-                                           Margin="10"></TextBlock>
-                                <TextBlock Text="{Binding PartnerCompany.Name}"></TextBlock>
+                                           Margin="10,0,10,0"
+                                           VerticalAlignment="Center"></TextBlock>
+                                <TextBlock Text="{Binding PartnerCompany.Name}"
+                                           VerticalAlignment="Center"></TextBlock>
                             </StackPanel>
 
                             <StackPanel Orientation="Horizontal">
                                 <TextBlock x:Name="LastnameBlock"
                                            Margin="5"
-                                           Text="{Binding Lastname}"></TextBlock>
+                                           Text="{Binding Lastname}"
+                                            HorizontalAlignment="Left"></TextBlock>
                                 <TextBlock x:Name="NameBlock"
                                            Margin="5"
-                                           Text="{Binding Name}"></TextBlock>
+                                           Text="{Binding Name}" 
+                                           HorizontalAlignment="Left"></TextBlock>
                                 <TextBlock x:Name="SurnameBlock"
                                            Margin="5"
-                                           Text="{Binding Surname}"></TextBlock>
+                                           Text="{Binding Surname}"
+                                            HorizontalAlignment="Left"></TextBlock>
                             </StackPanel>
 
-                            <TextBlock x:Name="phoneBlock" Text="{Binding Phone}"></TextBlock>
+                            <TextBlock x:Name="PhoneBlock" 
+                                       Text="{Binding Phone}"></TextBlock>
 
-                            <TextBlock x:Name="RatingBlock" Text="{Binding rating, StringFormat={}Рейтинг: {0} }"></TextBlock>
+                            <TextBlock x:Name="RatingBlock" 
+                                       Text="{Binding Rating, StringFormat={}Рейтинг: {0} }"></TextBlock>
                         </StackPanel>
 
+                        <StackPanel Orientation="Vertical" 
+                                    Grid.Column="1">
+                            <Button x:Name="HistoryBtn" 
+                                    Click="HistoryBtn_Click" 
+                                    Content="История"
+                                    Height="33"></Button>
+                            <Button x:Name="EditBtn" 
+                                    Click="EditBtn_Click" 
+                                    Content="Изменить"
+                                    Height="33"></Button>
+                        </StackPanel>
+                        
 
                         <TextBlock x:Name="DiscountBlock" 
                                    VerticalAlignment="Top" 
-                                   Margin="0,15,0,0"
-                                   HorizontalAlignment="Center"></TextBlock>
+                                   HorizontalAlignment="Center"
+                                   Text="{Binding Rating}"
+                                   Grid.Column="2"
+                                   Margin="30,15,0,50"></TextBlock>
                         
                     </Grid>
                     
@@ -76,7 +99,8 @@
                         Height="45"
                         Width="100"
                         VerticalAlignment="Center" 
-                        HorizontalAlignment="Center"></Button>
+                        HorizontalAlignment="Center"
+                        Click="AddBtn_Click"></Button>
 
             </StackPanel>
         </Grid>

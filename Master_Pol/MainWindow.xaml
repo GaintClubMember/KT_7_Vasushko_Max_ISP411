@@ -6,7 +6,7 @@
         xmlns:local="clr-namespace:Master_Pol"
         mc:Ignorable="d"
         Icon="/Resources/Мастер пол.ico"
-        Title="MainWindow" Height="620" Width="900"
+        Title="{Binding ElementName=frameContainer, Path=Content.Title}" Height="620" Width="900"
         MinHeight="620" MinWidth="900">
     <Grid>
         <Grid.RowDefinitions>
@@ -25,8 +25,10 @@
         </Grid>
 
         <Frame x:Name="frameContainer"
-               VerticalAlignment="Top" 
-               HorizontalAlignment="Center"></Frame>
+               VerticalAlignment="Center" 
+               HorizontalAlignment="Center"
+               Grid.Row="1"
+               NavigationUIVisibility="Hidden"></Frame>
         
     </Grid>
 </Window>

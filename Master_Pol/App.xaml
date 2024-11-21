@@ -19,14 +19,20 @@
         </Style>
 
         <Style TargetType="TextBox">
+            <Setter Property="VerticalContentAlignment" Value="Center"></Setter>
+            <Setter Property="Height" Value="33"></Setter>
             <Setter Property="FontFamily" Value="Segoe UI"></Setter>
         </Style>
 
         <Style TargetType="TextBlock">
+            <Setter Property="VerticalContentAlignment" Value="Center"></Setter>
+            <Setter Property="Height" Value="33"></Setter>
             <Setter Property="FontFamily" Value="Segoe UI"></Setter>
         </Style>
 
         <Style TargetType="ComboBox">
+            <Setter Property="VerticalContentAlignment" Value="Center"></Setter>
+            <Setter Property="Height" Value="33"></Setter>
             <Setter Property="FontFamily" Value="Segoe UI"></Setter>
         </Style>
 
